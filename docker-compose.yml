@@ -1,0 +1,37 @@
+
+services:
+  backend:
+    build:
+      context: ./backend
+    container_name: replog-backend
+    restart: unless-stopped
+    environment:
+      DATABASE_URL: "sqlite:////data/replog.db"
+      SECRET_KEY: "local-dev-only-change-me"
+    volumes:
+      - ./backend/replog.db:/data/replog.db
+    ports:
+      - "8000:8000"
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health')"
+      interval: 10s
+      timeout: 3s
+      retries: 5
+      start_period: 10s
+
+  frontend:
+    build:
+      context: ./frontend
+    container_name: replog-frontend
+    restart: unless-stopped
+    depends_on:
+      backend:
+        condition: service_healthy
+    ports:
+      - "5174:80"
+
+

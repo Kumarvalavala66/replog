@@ -1,0 +1,335 @@
+.exercise-svg {
+  --cycle: 2.6s;
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.exercise-svg.is-slow { --cycle: 5.2s; }
+
+.ex-stage-wash { fill: #101214; }
+.ex-horizon { stroke: #3a4144; stroke-width: 1.5; }
+.ex-shadow { fill: #0a0c0d; opacity: 0.85; }
+
+.ex-head,
+.ex-torso,
+.ex-torso-v,
+.ex-limb,
+.ex-limb-thin {
+  fill: #dce3c7;
+}
+
+.ex-torso { fill: #e4ead0; }
+.ex-torso-v { fill: #e4ead0; }
+.ex-limb-thin { fill: #cdd4b6; }
+.ex-grip { fill: #c6f25a; }
+.ex-bar { fill: #c6f25a; }
+.ex-plate {
+  fill: #171c14;
+  stroke: #c6f25a;
+  stroke-width: 2;
+}
+.ex-bench, .ex-bench-leg, .ex-post { fill: #2c3336; }
+.ex-cable { stroke: #8b938f; stroke-width: 2; }
+.ex-unknown-mark { stroke: #4a524c; stroke-width: 3; }
+
+.pu-chain, .pu-forearm, .pu-arm, .pu-body, .pu-thigh, .pu-shin,
+.sq-chain, .sq-shin, .sq-thigh, .sq-torso,
+.bp-arm, .bp-forearm, .bp-bar,
+.cu-arm, .cu-forearm, .cu-bell,
+.sp-arm, .sp-forearm, .sp-arm-r, .sp-forearm-r, .sp-bar,
+.pl-body, .pl-arm, .pl-forearm, .pl-arm-r, .pl-forearm-r,
+.lg-body, .lg-front, .lg-front-shin, .lg-back, .lg-back-shin,
+.pk-body,
+.lt-arm, .lt-forearm, .lt-arm-r, .lt-forearm-r, .lt-bar, .lt-body,
+.rw-arm, .rw-forearm, .rw-bell {
+  transform-box: view-box;
+  transform-origin: 0 0;
+}
+
+.pu-forearm { transform-origin: 70px 156px; }
+.pu-arm { transform-origin: 70px 128px; }
+.pu-body { transform-origin: 70px 106px; }
+.pu-thigh { transform-origin: 136px 110px; }
+.pu-shin { transform-origin: 173px 124px; }
+
+.sq-shin { transform-origin: 119px 156px; }
+.sq-thigh { transform-origin: 119px 118px; }
+.sq-torso { transform-origin: 118px 86px; }
+
+.bp-arm { transform-origin: 79px 98px; }
+.bp-forearm { transform-origin: 79px 64px; }
+
+.cu-arm { transform-origin: 118px 63px; }
+.cu-forearm { transform-origin: 153px 73px; }
+
+.sp-arm { transform-origin: 114px 59px; }
+.sp-forearm { transform-origin: 85px 58px; }
+.sp-arm-r { transform-origin: 126px 59px; }
+.sp-forearm-r { transform-origin: 155px 58px; }
+.sp-bar { transform-origin: 120px 27px; }
+
+.pl-body { transform-origin: 120px 26px; }
+.pl-arm { transform-origin: 91px 28px; }
+.pl-forearm { transform-origin: 91px 60px; }
+.pl-arm-r { transform-origin: 149px 28px; }
+.pl-forearm-r { transform-origin: 149px 60px; }
+
+.lg-body { transform-origin: 116px 156px; }
+.lg-front { transform-origin: 114px 86px; }
+.lg-front-shin { transform-origin: 153px 97px; }
+.lg-back { transform-origin: 114px 86px; }
+.lg-back-shin { transform-origin: 77px 97px; }
+
+.pk-body { transform-origin: 120px 156px; }
+
+.lt-arm { transform-origin: 116px 55px; }
+.lt-forearm { transform-origin: 88px 55px; }
+.lt-arm-r { transform-origin: 124px 55px; }
+.lt-forearm-r { transform-origin: 152px 55px; }
+.lt-bar { transform-origin: 120px 31px; }
+
+.rw-arm { transform-origin: 107px 92px; }
+.rw-forearm { transform-origin: 107px 122px; }
+
+.exercise-svg.is-running .pu-forearm { animation: pu-forearm var(--cycle) ease-in-out infinite; }
+.exercise-svg.is-running .pu-arm { animation: pu-arm var(--cycle) ease-in-out infinite; }
+.exercise-svg.is-running .pu-body { animation: pu-body var(--cycle) ease-in-out infinite; }
+.exercise-svg.is-running .pu-thigh { animation: pu-thigh var(--cycle) ease-in-out infinite; }
+.exercise-svg.is-running .pu-shin { animation: pu-shin var(--cycle) ease-in-out infinite; }
+
+.exercise-svg.is-running .sq-shin { animation: sq-shin var(--cycle) ease-in-out infinite; }
+.exercise-svg.is-running .sq-thigh { animation: sq-thigh var(--cycle) ease-in-out infinite; }
+.exercise-svg.is-running .sq-torso { animation: sq-torso var(--cycle) ease-in-out infinite; }
+
+.exercise-svg.is-running .bp-arm { animation: bp-arm var(--cycle) ease-in-out infinite; }
+.exercise-svg.is-running .bp-forearm { animation: bp-forearm var(--cycle) ease-in-out infinite; }
+
+.exercise-svg.is-running .cu-arm { animation: cu-arm var(--cycle) ease-in-out infinite; }
+.exercise-svg.is-running .cu-forearm { animation: cu-forearm var(--cycle) ease-in-out infinite; }
+
+.exercise-svg.is-running .sp-arm { animation: sp-arm var(--cycle) ease-in-out infinite; }
+.exercise-svg.is-running .sp-forearm { animation: sp-forearm var(--cycle) ease-in-out infinite; }
+.exercise-svg.is-running .sp-arm-r { animation: sp-arm-r var(--cycle) ease-in-out infinite; }
+.exercise-svg.is-running .sp-forearm-r { animation: sp-forearm-r var(--cycle) ease-in-out infinite; }
+.exercise-svg.is-running .sp-bar { animation: sp-bar var(--cycle) ease-in-out infinite; }
+
+.exercise-svg.is-running .pl-body { animation: pl-body var(--cycle) ease-in-out infinite; }
+.exercise-svg.is-running .pl-arm { animation: pl-arm var(--cycle) ease-in-out infinite; }
+.exercise-svg.is-running .pl-forearm { animation: pl-forearm var(--cycle) ease-in-out infinite; }
+.exercise-svg.is-running .pl-arm-r { animation: pl-arm-r var(--cycle) ease-in-out infinite; }
+.exercise-svg.is-running .pl-forearm-r { animation: pl-forearm-r var(--cycle) ease-in-out infinite; }
+
+.exercise-svg.is-running .lg-body { animation: lg-body var(--cycle) ease-in-out infinite; }
+.exercise-svg.is-running .lg-front { animation: lg-front var(--cycle) ease-in-out infinite; }
+.exercise-svg.is-running .lg-front-shin { animation: lg-front-shin var(--cycle) ease-in-out infinite; }
+.exercise-svg.is-running .lg-back { animation: lg-back var(--cycle) ease-in-out infinite; }
+.exercise-svg.is-running .lg-back-shin { animation: lg-back-shin var(--cycle) ease-in-out infinite; }
+
+.exercise-svg.is-running .pk-body { animation: pk-breathe 3.4s ease-in-out infinite; }
+
+.exercise-svg.is-running .lt-arm { animation: lt-arm var(--cycle) ease-in-out infinite; }
+.exercise-svg.is-running .lt-arm-r { animation: lt-arm-r var(--cycle) ease-in-out infinite; }
+.exercise-svg.is-running .lt-forearm { animation: lt-forearm var(--cycle) ease-in-out infinite; }
+.exercise-svg.is-running .lt-forearm-r { animation: lt-forearm-r var(--cycle) ease-in-out infinite; }
+.exercise-svg.is-running .lt-bar { animation: lt-bar var(--cycle) ease-in-out infinite; }
+.exercise-svg.is-running .lt-body { animation: lt-body var(--cycle) ease-in-out infinite; }
+
+.exercise-svg.is-running .rw-arm { animation: rw-arm var(--cycle) ease-in-out infinite; }
+.exercise-svg.is-running .rw-forearm { animation: rw-forearm var(--cycle) ease-in-out infinite; }
+
+@keyframes pu-forearm {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(-12deg); }
+}
+@keyframes pu-arm {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(58deg); }
+}
+@keyframes pu-body {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(-10deg); }
+}
+@keyframes pu-thigh {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(8deg); }
+}
+@keyframes pu-shin {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(-6deg); }
+}
+
+@keyframes sq-shin {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(-22deg); }
+}
+@keyframes sq-thigh {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(72deg); }
+}
+@keyframes sq-torso {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(12deg); }
+}
+
+@keyframes bp-arm {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(48deg); }
+}
+@keyframes bp-forearm {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(-58deg); }
+}
+
+@keyframes cu-arm {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(-14deg); }
+}
+@keyframes cu-forearm {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(-118deg); }
+}
+
+@keyframes sp-arm {
+  0%, 100% { transform: rotate(18deg); }
+  50% { transform: rotate(-42deg); }
+}
+@keyframes sp-forearm {
+  0%, 100% { transform: rotate(8deg); }
+  50% { transform: rotate(-18deg); }
+}
+@keyframes sp-arm-r {
+  0%, 100% { transform: rotate(-18deg); }
+  50% { transform: rotate(42deg); }
+}
+@keyframes sp-forearm-r {
+  0%, 100% { transform: rotate(-8deg); }
+  50% { transform: rotate(18deg); }
+}
+@keyframes sp-bar {
+  0%, 100% { transform: translateY(22px); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes pl-body {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-28px); }
+}
+@keyframes pl-arm {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(46deg); }
+}
+@keyframes pl-forearm {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(-28deg); }
+}
+@keyframes pl-arm-r {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(-46deg); }
+}
+@keyframes pl-forearm-r {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(28deg); }
+}
+
+@keyframes lg-body {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(8px, 10px); }
+}
+@keyframes lg-front {
+  0%, 100% { transform: rotate(-12deg); }
+  50% { transform: rotate(26deg); }
+}
+@keyframes lg-front-shin {
+  0%, 100% { transform: rotate(10deg); }
+  50% { transform: rotate(-38deg); }
+}
+@keyframes lg-back {
+  0%, 100% { transform: rotate(16deg); }
+  50% { transform: rotate(-18deg); }
+}
+@keyframes lg-back-shin {
+  0%, 100% { transform: rotate(-12deg); }
+  50% { transform: rotate(22deg); }
+}
+
+@keyframes pk-breathe {
+  0%, 100% { transform: translateY(0) scale(1, 1); }
+  50% { transform: translateY(-2px) scale(1.012, 1.028); }
+}
+
+@keyframes lt-arm {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(52deg); }
+}
+@keyframes lt-arm-r {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(-52deg); }
+}
+@keyframes lt-forearm {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(24deg); }
+}
+@keyframes lt-forearm-r {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(-24deg); }
+}
+@keyframes lt-bar {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(44px); }
+}
+@keyframes lt-body {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(2px); }
+}
+
+@keyframes rw-arm {
+  0%, 100% { transform: rotate(10deg); }
+  50% { transform: rotate(-48deg); }
+}
+@keyframes rw-forearm {
+  0%, 100% { transform: rotate(4deg); }
+  50% { transform: rotate(22deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .exercise-svg.is-running .pu-forearm,
+  .exercise-svg.is-running .pu-arm,
+  .exercise-svg.is-running .pu-body,
+  .exercise-svg.is-running .pu-thigh,
+  .exercise-svg.is-running .pu-shin,
+  .exercise-svg.is-running .sq-shin,
+  .exercise-svg.is-running .sq-thigh,
+  .exercise-svg.is-running .sq-torso,
+  .exercise-svg.is-running .bp-arm,
+  .exercise-svg.is-running .bp-forearm,
+  .exercise-svg.is-running .cu-arm,
+  .exercise-svg.is-running .cu-forearm,
+  .exercise-svg.is-running .sp-arm,
+  .exercise-svg.is-running .sp-forearm,
+  .exercise-svg.is-running .sp-arm-r,
+  .exercise-svg.is-running .sp-forearm-r,
+  .exercise-svg.is-running .sp-bar,
+  .exercise-svg.is-running .pl-body,
+  .exercise-svg.is-running .pl-arm,
+  .exercise-svg.is-running .pl-forearm,
+  .exercise-svg.is-running .pl-arm-r,
+  .exercise-svg.is-running .pl-forearm-r,
+  .exercise-svg.is-running .lg-body,
+  .exercise-svg.is-running .lg-front,
+  .exercise-svg.is-running .lg-front-shin,
+  .exercise-svg.is-running .lg-back,
+  .exercise-svg.is-running .lg-back-shin,
+  .exercise-svg.is-running .pk-body,
+  .exercise-svg.is-running .lt-arm,
+  .exercise-svg.is-running .lt-arm-r,
+  .exercise-svg.is-running .lt-forearm,
+  .exercise-svg.is-running .lt-forearm-r,
+  .exercise-svg.is-running .lt-bar,
+  .exercise-svg.is-running .lt-body,
+  .exercise-svg.is-running .rw-arm,
+  .exercise-svg.is-running .rw-forearm {
+    animation: none !important;
+  }
+}
