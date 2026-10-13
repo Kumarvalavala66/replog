@@ -33,3 +33,4 @@ Training volume is completed set weight in kilograms multiplied by repetitions. 
 ## Checks
 
 Run the frontend production build with `cd frontend && npm run build`. Run the backend workflow tests with `cd backend && .venv/bin/python -m unittest discover -s tests`.# replog
+# replog
